@@ -1,0 +1,8 @@
+- name: Add ZeroTier repo for SUSE/openSUSE
+  community.general.zypper_repository:
+    name: zerotier
+    description: ZeroTier, Inc. RPM Release Repository
+    repo: "https://download.opensuse.org/repositories/home:/alphard:/RHEL/openSUSE_Leap_15.2/"
+    auto_import_keys: yes
+    state: present
+  register: zerotier_repo
